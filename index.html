@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin: auto;
+        width: 500px;
+      }
+      button {
+        width: 100px;
+        height: 50px;
+        margin-left: auto;
+      }
+
+      body {
+        background-color: rgb(207, 204, 204);
+      }
+    </style>
+  </head>
+  <body>
+      
+      <div>                          
+          <h1> After clicking see results in console </h1>
+          <button onclick="toggle()" >Click Me</button>
+          <div id="show">
+
+          </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function toggler() {
+    let index = -1;
+    let arr = arguments;
+
+    return function () {
+      index = index + 1;
+      if (index >= arr.length) {
+        index = 0;
+      }
+      console.log( arr[index]);
+    };
+  }
+
+  const toggle = toggler(1,2,3);
+
+
+</script>
